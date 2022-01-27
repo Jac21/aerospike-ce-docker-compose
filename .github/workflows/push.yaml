@@ -7,3 +7,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build the stack
         run: docker-compose up -d
+      - name: Test
+        run: ocker run --platform linux/amd64 -ti aerospike/aerospike-tools:latest aql
