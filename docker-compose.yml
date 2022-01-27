@@ -11,6 +11,8 @@ services:
       - aerospike-data:/opt/aerospike/data
       - aerospike-config:/etc/aerospike
       - './aerospike.template.conf:/etc/aerospike/aerospike.template.conf'
+      - './entrypoint.sh:/entrypoint.sh'
+    entrypoint: [ "/usr/bin/dumb-init", "--", "/entrypoint.sh" ]
 volumes:
   aerospike-data:
   aerospike-config:
