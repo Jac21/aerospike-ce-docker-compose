@@ -13,6 +13,8 @@
 > docker exec -it aerospike aql
 ```
 
+![aql](https://raw.githubusercontent.com/Jac21/aerospike-ce-docker-compose/master/content/aql.png?token=GHSAT0AAAAAABP746Q6DCJD6QJ7I6IFDCHEYPTKOWA)
+
 ## License
 
 [MIT](LICENSE)
