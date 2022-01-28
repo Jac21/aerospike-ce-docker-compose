@@ -1,7 +1,7 @@
-version: '3.8'
+version: '3.9'
 services:
   aerospike:
-    image: aerospike:ce-5.7.0.8
+    build: .
     platform: linux/amd64
     restart: always
     container_name: aerospike
@@ -10,9 +10,6 @@ services:
     volumes:
       - aerospike-data:/opt/aerospike/data
       - aerospike-config:/etc/aerospike
-      - './aerospike.template.conf:/etc/aerospike/aerospike.template.conf'
-      - './entrypoint.sh:/entrypoint.sh'
-    entrypoint: [ "/usr/bin/dumb-init", "--", "/entrypoint.sh" ]
 volumes:
   aerospike-data:
   aerospike-config:

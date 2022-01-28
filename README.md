@@ -4,17 +4,13 @@
 ## Aerospike start-up
 
 ```console
-> docker-compose up
+> docker-compose up -d
 ```
 
 ## Usage
 
 ```console
-> docker run -ti aerospike/aerospike-tools:latest aql -h  $(docker inspect -f '{{.NetworkSettings.IPAddress }}' aerospike)
-```
-
-```console
-> docker run --platform linux/amd64 -ti aerospike/aerospike-tools:latest aql
+> docker exec -it aerospike aql
 ```
 
 ## License
